@@ -1,10 +1,10 @@
 from termcolor import colored
 import socket
 
-def fanc1():
-	blue = colored("[►]" , 'blue')	
-	red = colored("[✖]" , 'red')
-	green = colored("[✔]" , 'green')
+def funcf():
+	blue = colored("[!]" , 'blue')	
+	red = colored("[!]" , 'red')
+	green = colored("[!]" , 'green')
 
 	host = input(b + "HOST==>")
 	port = int(input(b + "PORT==>"))
@@ -17,10 +17,10 @@ def fanc1():
 		print(red , "PORT_STATUS==>" , port , "[CLOSED]")
 	else:
 		print(green , "PORT_STATUS==>" , port , "[OPEN]")
-def fanc2():
-	blue = colored("[►]" , 'blue')	
-	red = colored("[✖]" , 'red')
-	green = colored("[✔]" , 'green')
+def funcs():
+	blue = colored("[!]" , 'blue')	
+	red = colored("[!]" , 'red')
+	green = colored("[!]" , 'green')
 
 	host = input(blue , "HOST==>")
 	port = [20, 21, 22, 23, 42, 43, 53, 67, 69, 80]
@@ -31,25 +31,21 @@ def fanc2():
 			scan.connect((host , i))
 		except scan.error:
 			print(red , "PORT_STATUS==>" , port , "[CLOSED]")
-  		else:
+		else:
 			print(green , "PORT_STATUS==>" , port , "[OPEN]")
 
-
-
-print("\t PORT SCANNER MAIN MENU:")
-
-blue = colored("[►]" , 'blue')	
-red = colored("[✖]" , 'red')
-green = colored("[✔]" , 'green')
+blue = colored("[!]" , 'blue')	
+red = colored("[!]" , 'red')
+green = colored("[!]" , 'green')
 
 print("\t [1]---scan specific port")
 print("\t [2]---scan all ports")
 
-var = input()
+inpt = input()
 
-if var == "1":
-	fanc1()
-elif var == "2":
-	fanc2()
+if inpt == 1:
+	funcf()
+elif inpt == 2:
+	funcs()
 else:
 	print("Wrong parameter!" , 'red')
